@@ -5,6 +5,7 @@ import { UserLogin } from '../models/loginUser';
 import { first } from 'rxjs/operators';
 import { MessageService } from 'primeng/api';
 import { Subscription } from 'rxjs';
+import { LoginModel } from '../models/loginInfo';
 
 @Component({
   selector: 'app-login',
@@ -77,7 +78,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   //testing purposes -- comment once you are done with fe development
   onSubmit() {
+    const usrModel = new LoginModel();
+    usrModel.name = "John Doe";
+    usrModel.id = 1;
     this._router.navigateByUrl("/dashboard");
+    this._authService.setCurrentUserSubject(usrModel);
+    this._authService.setCurrentTokenSubject("Fake Token");
   }
 
   //ORIGINAL - UNCOMMENT WHEN BE

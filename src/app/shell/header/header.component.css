@@ -24,16 +24,9 @@ span:active, span:focus {
 
 
   .cstmBtn:hover {
-    background-color: rgb(104, 121, 151);
+    background-color: rgb(238, 238, 238);
   }
 
-  .cstmBtnMenu {
-    background-color: #313131;
-  }
-
-  .cstmBtnMenu:hover {
-    background-color: #007bff;
-  }
 
   @media print {
     .print {

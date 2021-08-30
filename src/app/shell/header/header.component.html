@@ -1,7 +1,12 @@
-<div class="row shadow desktop noPrint" style="min-height: 45px; background-color: #222222; line-height: 45px;">
+<div class="row shadow desktop noPrint" style="min-height: 45px; background-color: #ffffff; line-height: 45px;">
     <div class="col-md-2"></div>
-    <div class="col-md-2 text-white shadow">
-        <span class="mt-1" style="font-size: 28px; cursor: pointer; border: none;" (click)="goHome()"> <i class="fa fa-grav mr-2"></i> tOnlineShop</span>
+    
+<button class="desktop mt-2 btn btn-light text-left cstmBtnMenu noPrint" (click)="mobUserSidebar = true" style="min-width: 100px; position: absolute">
+    <i class="fa fa-bars mr-3"></i>
+    <span style="font-size: 18px; line-height: 18px;">MENU</span>
+</button>
+    <div class="col-md-2">
+        <span class="mt-1" style="font-size: 28px; cursor: pointer; border: none;" (click)="goHome()"> <i class="fa fa-grav mr-2"></i> tBP</span>
         
     </div>
 
@@ -24,10 +29,10 @@
         style="display: inline-block!important; height: 100%; min-width: 125px; border-radius: 0 !important;">
             <span style="font-size: 15px;text-shadow: black 0.1em 0.1em 0.2em;">PRIJAVI SE</span>
         </button> -->
-        <span class="cstmBtn" style="font-size: 16px; float: right; cursor: pointer; line-height: 50px;" (click)="op1.toggle($event);">
-            <i class="fa fa-user-circle text-white"
+        <span class="cstmBtn pl-5 pr-5" style="font-size: 16px; float: right; cursor: pointer; line-height: 50px;" (click)="op1.toggle($event);">
+            <i class="fa fa-user-circle"
                 ></i>
-                <span class="ml-2 text-white" *ngIf="isLoggedIn">{{currentActiveUser}}</span>
+                <span class="ml-2" *ngIf="isLoggedIn">{{currentActiveUser}}</span>
             <!-- <i class="fa fa-search" style="cursor: pointer;" (click)="mobUserSidebar = true"></i> -->
         </span>
     </div>
@@ -114,7 +119,7 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <hr color="gray" class="mt-5">
-                            <span style="font-size: 10px" class="text-white">TRoN © tOnlineShop</span>
+                            <span style="font-size: 10px" class="text-white">TRoN © tBP</span>
         </div>
     </div>
 
@@ -133,11 +138,11 @@
                         <form>
                             <input type="text" class="form-control mt-4" [(ngModel)]="userLoginInfo.email"
                             [ngClass]="{'is-invalid': isUsernameBad}"
-                             name="email" placeholder="Unesite email">
+                             name="email" placeholder="Enter your email">
 
                             <input type="password" class="form-control mt-3" [(ngModel)]="userLoginInfo.password"
                             [ngClass]="{'is-invalid': isPasswordBad}"
-                             name="password" placeholder="Unesite sifru">
+                             name="password" placeholder="Enter your password">
 
                             <!-- <div class="row text-left mt-3">
                                 <div class="col-md-12">
@@ -159,7 +164,7 @@
 
                             
                             <hr>
-                            <span style="font-size: 10px">TRoN © tOnlineShop</span>
+                            <span style="font-size: 10px">TRoN © tBP</span>
 
                         </form>
                     </div>
@@ -187,7 +192,7 @@
                     </div>
                 </div>
                 <hr>
-                <span style="font-size: 10px">TRoN © tOnlineShop</span>
+                <span style="font-size: 10px">TRoN © tBP</span>
 
                 <!-- <div class="row mt-4 text-center">
                     <div class="col-md-12">
@@ -198,16 +203,11 @@
             </div>
         </div>
 </p-overlayPanel>
-
-
-<div class="row desktop noPrint" *ngIf="isLoggedIn" style="background-color: rgb(54, 54, 54);">
+<!-- <div class="row  noPrint" *ngIf="isLoggedIn" style="background-color: rgb(255, 255, 255);">
     <div class="col-md-1">
-        <button class="btn btn-primary text-left cstmBtnMenu" (click)="mobUserSidebar = true" style="margin-left: -15px; min-width: 120px">
-            <i class="fa fa-bars mr-3"></i>
-            <span style="font-size: 18px; line-height: 18px;">MENU</span>
-        </button>
+        
     </div>
     <div class="col-md-10 text-center text-white mb-1">
         <span class="border-bottom" style="font-size: 20px">{{title}}</span>
     </div>
-</div>
+</div> -->

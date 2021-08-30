@@ -1,1 +1,115 @@
-<span>dashboard works!</span>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+
+
+        <div class="row mt-3 text-white">
+            <div class="col-md-2 mt-2 mr-2 ml-2 rounded shadow" 
+            style="min-height: 105px; background-color: #15375f;">
+                <div class="row text-center mt-2">
+                    <div class="col-md-12">
+                        <i class="fa fa-book mr-2"></i>
+                        <span style="font-size: 18px" pTooltip="This week">
+                            Transactions total<hr>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span style="font-size: 20px">5732</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-1"></div> -->
+
+            <div class="col-md-3 ml-2 mr-2 mt-2 rounded shadow" 
+            style="min-height: 105px; background-color: #042536;">
+                <div class="row text-center mt-3">
+                    <div class="col-md-12">
+                        <i class="fa fa-eur mr-2"></i>
+                        <span style="font-size: 18px">
+                            Reserved Amount <hr>
+                        </span>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: -8px;">
+                    <div class="col-md-12 text-center">
+                        <!-- <span style="font-size: 20px">RSD 12,450,200.25</span> -->
+                        <!-- <span style="font-size: 20px">{{totalKnjigePrice | number : '1.2-2'}} {{' RSD'}}</span> -->
+						<span style="font-size: 20px;">79,378.00 EUR</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-1"></div> -->
+
+            <div class="col-md-2 ml-2 mr-2 mt-2 rounded shadow" 
+            style="min-height: 105px; background-color: #0e505e;">
+                <div class="row text-center mt-2">
+                    <div class="col-md-12">
+                        <i class="fa fa-address-book mr-2"></i>
+                        <span style="font-size: 18px">
+                            Pending Users <hr>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span style="font-size: 20px">89</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 ml-2 mr-2 mt-2 rounded shadow" 
+            style="min-height: 105px; background-color: #056474;">
+                <div class="row text-center mt-2">
+                    <div class="col-md-12">
+                        <i class="fa fa-users mr-2"></i>
+                        <span style="font-size: 18px">
+                            Active Users Total <hr>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span style="font-size: 20px">123</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 ml-2 mr-2 mt-2 rounded shadow" 
+            style="min-height: 105px; background-color: #514775;">
+                <div class="row text-center mt-2">
+                    <div class="col-md-12">
+                        <i class="fa fa-clock-o mr-2"></i>
+                        <span style="font-size: 18px">
+                            Date <hr>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span style="font-size: 20px">{{ today }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-2"></div>
+            <div class="col-md-2"></div> -->
+        </div>
+        <hr>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <p-chart type="bar" [data]="weekData" [options]="options"></p-chart>
+            </div>
+
+            <div class="col-md-6">
+                <p-chart type="line" [data]="donData" [options]="options"></p-chart>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-1"></div>
+</div>

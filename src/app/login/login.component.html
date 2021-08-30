@@ -1,0 +1,58 @@
+<div class="row shadow bckgImg" style="min-height: 94vh; text-align: center!important;">
+    <div class="col-md-12 text center">
+        <div class="text-center" style="max-width: 360px; vertical-align: middle; display: inline-block;
+         min-height: 100px; width: 100%; margin-top: 50px">
+            <div class="rounded" style="background-color: #e6e7e9e3!important;">
+                <span><i class="fa fa-grav fa-2x mr-2 mt-2"></i> <span style="font-size: 34px">tOnlineShop</span></span> 
+            </div>
+            <div class="bg-light mt-2">
+                <!-- <div class="col-md-12"> -->
+                    <div class="loginPanel rounded">
+                        <span><i class="fa fa-grav fa-4x"></i></span>
+                        <div class="row mt-4">
+                            <div class="col-md-12 text-center">
+                                <span style="font-size: 18px;">LOGIN</span>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <form>
+                                    <input type="text" [(ngModel)]="userLoginInfo.email"
+                                    [ngClass]="{'is-invalid': isUsernameBad}"
+                                     name="email" class="form-control" placeholder="Unesite email">
+
+                                    <input type="password" [(ngModel)]="userLoginInfo.password"
+                                    [ngClass]="{'is-invalid': isPasswordBad}"
+                                     name="password" class="form-control mt-4" placeholder="Unesite sifru">
+
+                                    <!-- <div class="row text-left mt-4">
+                                        <div class="col-md-12">
+                                            <p-checkbox name="group1" value="zapamtiMe" label="Zapamti me" inputId="zm"></p-checkbox>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="row mt-4">
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary btn-block" (click)="onSubmit()">Login</button>
+                                        </div>
+                                    </div>
+
+                                
+                                    <div class="row mt-3 mb-2">
+                                        <div class="col-md-12">
+                                            <a href="#">Forgot Password?</a>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <span style="font-size: 10px">TRoN © OnlineShop</span>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>

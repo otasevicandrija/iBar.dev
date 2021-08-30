@@ -1,0 +1,213 @@
+<div class="row shadow desktop noPrint" style="min-height: 45px; background-color: #222222; line-height: 45px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-2 text-white shadow">
+        <span class="mt-1" style="font-size: 28px; cursor: pointer; border: none;" (click)="goHome()"> <i class="fa fa-grav mr-2"></i> tOnlineShop</span>
+        
+    </div>
+
+    <div class="col-md-6 text-right">
+        <!-- need to implement user icon and overlay panel with the menu -->
+        <!-- <button class="btn btn-secondary text-white text-center border-right" (click)="op1.toggle($event);"
+        style="display: inline-block!important; height: 100%; min-width: 125px; border-radius: 0 !important;">
+            <span style="font-size: 15px;text-shadow: black 0.1em 0.1em 0.2em;">PRIJAVI SE</span>
+        </button> -->
+
+        <!-- <button class="btn btn-secondary text-white text-center border-right" (click)="op1.toggle($event);"
+         routerLink="/login" *ngIf="!userActive"
+        style="display: inline-block!important; height: 100%; min-width: 205px; border-radius: 0 !important;">
+            <span style="font-size: 15px;text-shadow: black 0.1em 0.1em 0.2em;">PROFIL</span>
+            <p style="font-size: 11px; height: 2px">{{currentActiveUser}}</p>
+        </button> -->
+
+        <!-- <button class="btn btn-secondary text-white text-center border-right"
+         routerLink="/login" *ngIf="userActive"
+        style="display: inline-block!important; height: 100%; min-width: 125px; border-radius: 0 !important;">
+            <span style="font-size: 15px;text-shadow: black 0.1em 0.1em 0.2em;">PRIJAVI SE</span>
+        </button> -->
+        <span class="cstmBtn" style="font-size: 16px; float: right; cursor: pointer; line-height: 50px;" (click)="op1.toggle($event);">
+            <i class="fa fa-user-circle text-white"
+                ></i>
+                <span class="ml-2 text-white" *ngIf="isLoggedIn">{{currentActiveUser}}</span>
+            <!-- <i class="fa fa-search" style="cursor: pointer;" (click)="mobUserSidebar = true"></i> -->
+        </span>
+    </div>
+</div>
+
+<!-- MOBILE -->
+<div class="row mobile noPrint" style="min-height: 45px; background-color: #222222; line-height: 45px;">
+    <div class="col-md-12 text-center text-white">
+        <span style="font-size: 28px; float: left; cursor: pointer;" (click)="mobUserSidebar = true"><i class="fa fa-bars"></i></span>
+        <span class="mt-1" 
+        style="font-size: 30px; cursor: pointer; border: none; margin-left: 5px; cursor: pointer;"
+         (click)="goHome()"> <i class="fa fa-grav"></i></span>
+        <span style="font-size: 24px; float: right;">
+            <i class="fa fa-user-circle mr-4" style="cursor: pointer;" 
+                (click)="op1.toggle($event);"></i>
+            <!-- <i class="fa fa-search" style="cursor: pointer;" (click)="mobUserSidebar = true"></i> -->
+        </span>
+    </div>
+    <div class="col-md-4 text-right text-white">
+        
+    </div>
+</div>
+
+<!-- <p-sidebar [(visible)]="mobMenuSidebar" position="right" [baseZIndex]="10000">
+    <h1 style="font-weight:normal">Right Sidebar</h1>
+    <button type="button" (click)="mobMenuSidebar = false" class="btn btn-primary">Save</button>
+    <button type="button" (click)="mobMenuSidebar = false" class="btn btn-danger">Cancel</button>
+</p-sidebar> -->
+
+<p-sidebar [(visible)]="mobUserSidebar" position="left" [baseZIndex]="10000" [style]="{'width':'220px'}">
+    <h5 style="font-weight:normal" class="text-white">MENU</h5> <hr color="gray">
+    <span *ngIf="!isLoggedIn" class="text-white"><i class="fa fa-info-circle mr-2"></i>Please, login to see the content.</span><br>
+
+    <div class="row" *ngIf="isLoggedIn">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-sm btn-block text-left" (click)="goToDashboard(); mobUserSidebar = false">
+                        <i class="fa fa-book mr-2"></i>
+                        <span><b>SHOP CONFIG</b></span>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-sm btn-block text-left" (click)="mobUserSidebar = false">
+                        <i class="fa fa-bar-chart mr-2"></i>
+                        <span><b>MENU 2</b></span>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-sm btn-block text-left" (click)="mobUserSidebar = false" disabled="true">
+                        <i class="fa fa-id-card mr-2"></i>
+                        <span><b>MENU 3</b></span>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-sm btn-block text-left">
+                        <i class="fa fa-users mr-2"></i>
+                        <span><b>MENU 4</b></span>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-sm btn-block text-left" (click)="mobUserSidebar = false">
+                        <i class="fa fa-gear mr-2"></i>
+                        <span><b>SETTINGS</b></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <hr color="gray" class="mt-5">
+                            <span style="font-size: 10px" class="text-white">TRoN © tOnlineShop</span>
+        </div>
+    </div>
+
+    <!-- <button type="button" (click)="mobUserSidebar = false" class="btn btn-primary btn-sm btn-block mt-4">OK</button> -->
+    <!-- <button type="button" (click)="mobUserSidebar = false" class="btn btn-danger">Cancel</button> -->
+</p-sidebar>
+
+
+
+<p-overlayPanel #op1 [style]="{width: '250px'}" [baseZIndex]="10001" (onShow)="blocked = true" (onHide)="blocked = false">
+        <div class="row noPrint" style="min-height: 300px;" *ngIf="!isLoggedIn">
+            <div class="col-md-12 text-center">
+                <span><i class="fa fa-grav fa-4x mt-3"></i></span>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <input type="text" class="form-control mt-4" [(ngModel)]="userLoginInfo.email"
+                            [ngClass]="{'is-invalid': isUsernameBad}"
+                             name="email" placeholder="Unesite email">
+
+                            <input type="password" class="form-control mt-3" [(ngModel)]="userLoginInfo.password"
+                            [ngClass]="{'is-invalid': isPasswordBad}"
+                             name="password" placeholder="Unesite sifru">
+
+                            <!-- <div class="row text-left mt-3">
+                                <div class="col-md-12">
+                                    <p-checkbox name="group1" value="zapamtiMe" label="Zapamti me" inputId="zm"></p-checkbox>
+                                </div>
+                            </div> -->
+
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary btn-block" (click)="onSubmit(); op1.hide()">Login</button>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2 mb-2">
+                                <div class="col-md-12">
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                            </div>
+
+                            
+                            <hr>
+                            <span style="font-size: 10px">TRoN © tOnlineShop</span>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center noPrint" *ngIf="isLoggedIn">
+            <div class="col-md-12">
+                <div class="row mt-2">
+                    <div class="col-md-12">
+                        <span class="font-weight-bold">{{currentActiveUser}}</span>
+                    </div>
+                </div>
+                
+                <div class="row mt-2">
+                    <div class="col-md-12 text-center">
+                        <i class="fa fa-user-circle fa-5x"></i>
+                    </div>
+                </div>
+
+                <div class="row mt-2 text-center">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary btn-sm" (click)="logout(); op1.hide()">Log Out</button>
+                    </div>
+                </div>
+                <hr>
+                <span style="font-size: 10px">TRoN © tOnlineShop</span>
+
+                <!-- <div class="row mt-4 text-center">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary btn-block" routerLink="/profile" (click)="op1.hide();">Profile (test component)</button>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+</p-overlayPanel>
+
+
+<div class="row desktop noPrint" *ngIf="isLoggedIn" style="background-color: rgb(54, 54, 54);">
+    <div class="col-md-1">
+        <button class="btn btn-primary text-left cstmBtnMenu" (click)="mobUserSidebar = true" style="margin-left: -15px; min-width: 120px">
+            <i class="fa fa-bars mr-3"></i>
+            <span style="font-size: 18px; line-height: 18px;">MENU</span>
+        </button>
+    </div>
+    <div class="col-md-10 text-center text-white mb-1">
+        <span class="border-bottom" style="font-size: 20px">{{title}}</span>
+    </div>
+</div>

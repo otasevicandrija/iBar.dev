@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@media print {
+    .print {
+        display: auto;
+    }
+
+    .noPrint {
+        display: none;
+    }
+}
+
+.bookHover:hover {
+    background-color: #007bff;
+    cursor: pointer;
+  }
+
+.selectedRow {
+    background-color: #20a5a5;
+}
+
+.p-sidebar {
+    background-color: #263850!important;
+}

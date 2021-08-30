@@ -1,0 +1,4 @@
+.hvr:hover {
+    background-color: rgba(100, 148, 237, 0.527);
+    cursor: pointer;
+}

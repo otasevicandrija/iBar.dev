@@ -1,0 +1,35 @@
+<p-blockUI [blocked]="blocked"></p-blockUI>
+<div class="loadSpinner" *ngIf="blocked">
+    <p-progressSpinner></p-progressSpinner>
+    <!-- <img src="./../assets/loader.gif"> -->
+</div>
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+            <app-header></app-header>
+        </div>
+    </div>
+
+    <p-toast position="top-center" [baseZIndex]="100000"></p-toast>
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> -->
+                        <router-outlet></router-outlet>
+                    <!-- </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

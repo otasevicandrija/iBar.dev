@@ -1,0 +1,54 @@
+span:active, span:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    /* .desktop {
+      background-color: blue;
+    } */
+    .mobile {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    /* .mobile {
+      background-color: red;
+    } */
+    .desktop {
+      display: none;
+    }
+  }
+
+
+  .cstmBtn:hover {
+    background-color: rgb(104, 121, 151);
+  }
+
+  .cstmBtnMenu {
+    background-color: #313131;
+  }
+
+  .cstmBtnMenu:hover {
+    background-color: #007bff;
+  }
+
+  @media print {
+    .print {
+        display: auto;
+    }
+
+    .noPrint {
+        display: none;
+    }
+}
+
+@media screen {
+  .printWithoutDisplay {
+    display: none;
+  }
+}
+
+  

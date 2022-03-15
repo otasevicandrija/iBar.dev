@@ -60,7 +60,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
               errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
    
             }
-            this._messageService.add({severity:'error', summary: 'Doslo je do greske.', detail: 'Neuspesna akcija.' + error.error.message});
+            this._messageService.add({severity:'error', summary: 'Oops. Something went wrong', detail: 'Failed Action' + error.error.message});
             this._sharedService.setLoader(false);
             return throwError(errorMessage);
    

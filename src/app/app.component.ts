@@ -9,7 +9,7 @@ import { PrimeNGConfig } from 'primeng-lts/api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy, AfterViewChecked{
-  title = 'devPP';
+  title = 'SovelSoft';
   blocked: boolean = false;
   loaderSubscription: Subscription;
 

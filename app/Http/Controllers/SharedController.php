@@ -16,7 +16,7 @@ class SharedController extends Controller
     public function index()
     {
         return response([
-            "msg" => "Hello NAV ;)"
+            "msg" => "Hello NAV"
         ], 200);
     }
 
